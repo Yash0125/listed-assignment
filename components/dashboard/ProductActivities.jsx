@@ -6,8 +6,8 @@ export const ProductActivities = () => {
     <section className="p-[30px_40px] w-full gap-[30px] bg-white rounded-[20px] flex flex-col">
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-[5px]">
-          <p className="text-[18px] leading-[22px] font-bold">Activities</p>
-          <p className="text-[14px] text-[#858585] leading-[17px]">
+          <p className="text-[18px] leading-[22px] font-bold font-montserrat">Activities</p>
+          <p className="text-[12px] text-[#858585] leading-[16px]">
             May - June 2021
           </p>
         </div>
