@@ -1,22 +1,6 @@
 import React from "react";
 import { PieChart, Pie, ResponsiveContainer, Cell } from "recharts";
-const data = [
-  {
-    name: "Group A",
-    value: 400,
-    fill: "#98D89E",
-  },
-  {
-    name: "Group B",
-    value: 300,
-    fill: "#EE8484",
-  },
-  {
-    name: "Group C",
-    value: 500,
-    fill: "#F6DC7D",
-  },
-];
+import { data } from "../../../helpers/dummy";
 
 export const CustomPieChart = () => {
   return (
@@ -26,8 +10,8 @@ export const CustomPieChart = () => {
         width={145}
         height={145}
       >
-        <Pie data={data} cx="50%" cy="50%" outerRadius={70}>
-          {data.map((entry, index) => (
+        <Pie data={data.pieChartData} cx="50%" cy="50%" outerRadius={70}>
+          {data.pieChartData.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.fill} />
           ))}
         </Pie>
