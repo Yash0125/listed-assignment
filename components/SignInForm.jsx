@@ -1,4 +1,6 @@
 import { Input } from "./ui/Input";
+import { signIn} from 'next-auth/react';
+
 export const SignInForm = () => {
   const inputConfig = [
     {
@@ -21,7 +23,7 @@ export const SignInForm = () => {
         Sign in to your account
       </p>
       <div className="flex w-full justify-between mt-[26px]">
-        <button className="flex w-[180px] h-[30px] bg-white rounded-[10px] items-center gap-[10px] justify-center font-montserrat">
+        <button onClick={()=> signIn('google',{ callbackUrl:'/dashboard' })} className="flex w-[180px] h-[30px] bg-white rounded-[10px] items-center gap-[10px] justify-center font-montserrat">
           <img
             src="https://res.cloudinary.com/dqzjevzuo/image/upload/v1685693166/ykzektfqmzw2wsusxesf.svg"
             className="h-[14px] w-[14px]"
@@ -38,7 +40,7 @@ export const SignInForm = () => {
             alt=""
           />
           <p className="text-[12px] leading-[15px] text-[#858585]">
-            Sign in with Google
+            Sign in with Apple
           </p>
         </button>
       </div>
