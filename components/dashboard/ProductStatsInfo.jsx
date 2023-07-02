@@ -6,7 +6,7 @@ export const ProductStatsInfo = () => {
   
   return (
     <div className="w-full flex gap-[36px] min-h-[120px] overflow-x-scroll no-scrollbar">
-      {userStats.map((stat) => {
+      {data.userStats.map((stat) => {
         return (
           <StatisticsCard
             statName={stat.statName}

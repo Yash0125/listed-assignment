@@ -11,7 +11,7 @@ export const Sidebar = () => {
         </p>
 
         <ul className="flex flex-col gap-[40px]">
-          {navItems.map((item) => {
+          {data.navItems.map((item) => {
             return (
               <NavListItems
                 text={item.text}
