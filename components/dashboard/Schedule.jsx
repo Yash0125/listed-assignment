@@ -3,14 +3,13 @@ import { EventItem } from "../ui/EventItem";
 import { data } from "../../helpers/dummy";
 
 export const Schedule = () => {
- 
   return (
-    <div className="flex flex-col bg-white rounded-[20px] min-w-[480px] w-full p-[30px_40px] gap-[23px]">
-      <div className="w-full flex justify-between">
+    <div className="flex flex-col bg-white rounded-[20px]  w-full p-[30px_40px] gap-[23px]">
+      <div className="w-full flex items-center  justify-between">
         <p className="text-[18px] leading-[22px] font-bold font-montserrat">
           Today's schedule
         </p>
-        <p className="text-[12px] leading-[16px] text-[#858585]">
+        <p className="text-[12px] leading-[16px] text-[#858585] cursor-pointer">
           See all
           <img
             className="w-[5px] h-[8px] inline ml-2"
@@ -23,6 +22,7 @@ export const Schedule = () => {
         {data.eventData.map((item, index) => {
           return (
             <EventItem
+              key={index}
               title={item.title}
               time={item.time}
               description={item.description}
